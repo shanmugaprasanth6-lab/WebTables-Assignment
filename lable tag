@@ -1,0 +1,25 @@
+
+package Assignmentfiles;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LabelTag {
+
+    public static void main(String[] args) {
+
+        // Launch browser
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        // Open URL
+        driver.get("https://www.tutorialspoint.com/selenium/practice/alerts.php");
+        // Locate the label tag and fetch text
+        WebElement labelText = driver.findElement(By.tagName("label"));
+        // Print the label text
+        System.out.println("Text inside label tag: " + labelText.getText());
+        // Close browser
+        driver.quit();
+    }
+}
